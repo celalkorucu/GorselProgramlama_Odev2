@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gorsel_programalama_odev_iki.Todo"
+             Title="Todo">
+    <VerticalStackLayout Padding="20">
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="taskEntry" Placeholder="Yapılacak : " Margin="10,10,30,0" PlaceholderColor="Black" />
+            <ImageButton Clicked="OnAddTaskClicked" BackgroundColor="#00b2ee"  Margin="10" Source="Images/plus.png" WidthRequest="50" HeightRequest="50"/>
+        </StackLayout>
+        <ListView x:Name="taskListView" ItemsSource="{Binding Tasks}" VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Margin="7" >
+                            <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand"  TextColor="Black" Margin="10,0,10,0" />
+
+
+                            <ImageButton                             
+                            Source="Images/edit.png"
+                            Clicked="OnEditClick"
+                            CommandParameter="{Binding .}"
+                           
+                            
+                           ></ImageButton>
+
+
+                            <ImageButton
+                            Source="Images/delete.png"
+                            Clicked="OnDeleteClicked"
+                            CommandParameter="{Binding .}"></ImageButton>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
