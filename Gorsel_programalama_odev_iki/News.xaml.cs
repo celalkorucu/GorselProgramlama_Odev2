@@ -37,7 +37,6 @@ public partial class News : ContentPage
             if (root != null)
             {
                 Console.WriteLine("Status: " + root.status);
-                // Burada root nesnesinin içindeki diðer özelliklere eriþebilirsiniz.
 
                 FilteredNewsItems.Clear();
                 foreach (var news in root.items)
@@ -49,7 +48,6 @@ public partial class News : ContentPage
                         ImageUrl = news.enclosure.link,
                         PubDate = news.pubDate,
                         Author = news.author
-                        // Ýhtiyaca göre diðer özellikleri ekleyebilirsiniz
                     }); ; 
                 }
 
@@ -72,10 +70,9 @@ public partial class News : ContentPage
             string categoryText = clickedButton.Text;
 
 
-            clickedButton.BackgroundColor = Colors.Red; // Deðiþtirmek istediðiniz rengi kullanýn
+            clickedButton.BackgroundColor = Colors.Red; 
            
            
-            // Diðer düðmlerin arka plan rengini varsayýlan renge geri yükleyin
            
 
             Category selectCategory = new Category();
@@ -87,9 +84,7 @@ public partial class News : ContentPage
                     selectCategory.Tittle = Category.CategoryList[i].Tittle;
                     selectCategory.Link = Category.CategoryList[i].Link;
                 }
-            }
-            //DisplayAlert("Kategori Seçildi", $"Seçilen Kategori: {categoryText}", "Tamam");
-            
+            }            
             GetRoot(selectCategory);
         }
     }

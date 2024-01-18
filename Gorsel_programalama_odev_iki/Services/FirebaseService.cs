@@ -14,7 +14,6 @@ namespace Gorsel_programalama_odev_iki.Services
 
         public FirebaseService()
         {
-            // Firestore bağlantısı kurma
             _firestoreDb = FirestoreDb.Create("1:854276152552:android:6aae738d4f4c0c40303d5d");
         }
 
@@ -24,15 +23,12 @@ namespace Gorsel_programalama_odev_iki.Services
 
             try
             {
-                // Firestore koleksiyon referansı alın
                 CollectionReference collection = _firestoreDb.Collection("User");
 
-                // Koleksiyondaki belgeleri alın
                 QuerySnapshot snapshot = await collection.GetSnapshotAsync();
 
                 foreach (DocumentSnapshot document in snapshot.Documents)
                 {
-                    // Belge verilerini işleyin
                     var data = document.ToDictionary();
                     if (data.TryGetValue("name", out var value))
                     {
@@ -42,7 +38,6 @@ namespace Gorsel_programalama_odev_iki.Services
             }
             catch (Exception ex)
             {
-                // Hata durumunda işlemleri burada yönetin
                 Console.WriteLine($"Firestore Hatası: {ex.Message}");
             }
 

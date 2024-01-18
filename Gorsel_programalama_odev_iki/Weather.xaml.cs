@@ -20,7 +20,7 @@ public partial class Weather : ContentPage
     {
 
         a();
-        //refresh();
+     
     }
 
     public async Task a()

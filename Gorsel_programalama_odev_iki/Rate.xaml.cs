@@ -28,14 +28,13 @@ public partial class Rate : ContentPage
 
         GetList();
 
-        BindingContext = this; // Set the BindingContext to the page itself
+        BindingContext = this; 
 
 
 
 
 
 
-        //rateListView.ItemsSource = FilteredRateItems;
 
     }
 
@@ -58,7 +57,6 @@ public partial class Rate : ContentPage
             new RateItem { Buying = root.XU100.alis}
 
 
-            // Add other data items here
         };
 
         buyingGrid.ItemsSource = RateItems;
@@ -77,7 +75,6 @@ public partial class Rate : ContentPage
             new RateItem { Sales = root.XU100.satis}
 
 
-            // Add other data items here
         };
         Console.WriteLine("Satýs : "+root.USD.satis);
         salesGrid.ItemsSource = SalesItems;
@@ -96,7 +93,6 @@ public partial class Rate : ContentPage
             new RateItem { Change = root.XU100.degisim}
 
 
-            // Add other data items here
         };
         changeGrid.ItemsSource = ChangesItems;
 
@@ -113,17 +109,11 @@ public partial class Rate : ContentPage
             new RateItem { Yon = root.ETH.d_yon},
             
 
-            // Add other data items here
         };
       
 
         yonGrid.ItemsSource = YonItems;
 
-        // Set the binding context for the CollectionView
-
-
-        // CollectionView'a koleksiyonu baðlayýn
-        //dataGrid.ItemsSource = veriListesi;
 
     }
 
