@@ -4,5 +4,6 @@ Sizden ricam eğer ödevimin çalışması konusunda bir sıkıntı yaşarsanız
 
 Uygulamamdaki menü yatay biçimde en üsttedir.
 
+Maalesef alttaki video uygulamamın son hali değildir ama büyük çoğunlukla benzemektedir
 
 https://ogrencibartinedu-my.sharepoint.com/personal/21010310079_ogrenci_bartin_edu_tr/_layouts/15/stream.aspx?id=%2Fpersonal%2F21010310079%5Fogrenci%5Fbartin%5Fedu%5Ftr%2FDocuments%2FG%C3%B6rselProgramlama%5FOdev2%2FGorselProgramlama%5FOdev2%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
