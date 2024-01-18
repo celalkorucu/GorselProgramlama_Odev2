@@ -5,9 +5,9 @@
              Title="Settings">
     <VerticalStackLayout>
 
-        <HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
             <Label Text="Koyu Mode : " Margin="20"/>
-            <Switch HorizontalOptions="Start" Toggled="DarkModeOnOff"/>
+            <Switch HorizontalOptions="Start" Toggled="DarkModeOnOff" />
 
         </HorizontalStackLayout>
     </VerticalStackLayout>

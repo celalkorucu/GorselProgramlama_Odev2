@@ -13,7 +13,7 @@
             var pageMainMenuItem = new ToolbarItem
             {
                 
-                IconImageSource = ImageSource.FromFile("Images/home.png"),
+                IconImageSource = ImageSource.FromFile("home.png"),
                 Text = "Ana sayfa",
                 Order = ToolbarItemOrder.Primary,
                 Priority = 0
@@ -31,7 +31,7 @@
             var pageNewsMenuItem = new ToolbarItem
             {
                 Text = "Haberler",
-                IconImageSource = ImageSource.FromFile("Images/news.png"),
+                IconImageSource = ImageSource.FromFile("news.png"),
                 Order = ToolbarItemOrder.Primary,
 
                 Priority = 1
@@ -50,7 +50,7 @@
             var pageRateMenuItem = new ToolbarItem
             {
                 Text = "Kurlar",
-                IconImageSource = ImageSource.FromFile("Images/rates.png"),
+                IconImageSource = ImageSource.FromFile("rates.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 1
             };
@@ -67,7 +67,7 @@
             var pageWeatherItem = new ToolbarItem
             {
                  Text = "Hava Durumu",
-                IconImageSource = ImageSource.FromFile("Images/weather.png"),
+                IconImageSource = ImageSource.FromFile("weather.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 1
             };
@@ -84,7 +84,7 @@
             var pageTodoMenuItem = new ToolbarItem
             {
                  Text = "Yapılacaklar",
-                IconImageSource = ImageSource.FromFile("Images/todo.png"),
+                IconImageSource = ImageSource.FromFile("todo.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 1
             };
@@ -101,7 +101,7 @@
             var pageSettingsMenuItem = new ToolbarItem
             {
                 Text = "Ayarlar",
-                IconImageSource = ImageSource.FromFile("Images/settings.png"),
+                IconImageSource = ImageSource.FromFile("settings.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 1
             };

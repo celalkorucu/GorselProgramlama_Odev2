@@ -50,9 +50,13 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\add.png" />
+	  <None Remove="Resources\Images\delete.png" />
 	  <None Remove="Resources\Images\down.png" />
+	  <None Remove="Resources\Images\edit.png" />
+	  <None Remove="Resources\Images\ekle.jpg" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\news.png" />
+	  <None Remove="Resources\Images\plus.png" />
 	  <None Remove="Resources\Images\pp.jpeg" />
 	  <None Remove="Resources\Images\rates.png" />
 	  <None Remove="Resources\Images\settings.png" />

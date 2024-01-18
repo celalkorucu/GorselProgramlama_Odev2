@@ -4,8 +4,8 @@
              x:Class="Gorsel_programalama_odev_iki.News"
              Title="News">
     <StackLayout>
-        <ScrollView Orientation="Horizontal">
-            <StackLayout Orientation="Horizontal" Margin="10" Spacing="10">
+        <ScrollView Orientation="Horizontal" HorizontalOptions="Center">
+            <StackLayout Orientation="Horizontal" Margin="10" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
                 <Button x:Name="MansetButton" Text ="Manşet" Clicked="CategoryButton_Clicked"  BackgroundColor="#CCCCCC"/>
                 <Button x:Name="EkonomiButton" Text="Ekonomi" Clicked="CategoryButton_Clicked" BackgroundColor="#CCCCCC"/>
                 <Button x:Name="GundemButton" Text="Gündem" Clicked="CategoryButton_Clicked" BackgroundColor="#CCCCCC"/>

@@ -3,37 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Gorsel_programalama_odev_iki.Todo"
              Title="Todo">
-    <VerticalStackLayout Padding="20">
-        <StackLayout Orientation="Horizontal">
-            <Entry x:Name="taskEntry" Placeholder="Yapılacak : " Margin="10,10,30,0" PlaceholderColor="Black" />
-            <ImageButton Clicked="OnAddTaskClicked" BackgroundColor="#00b2ee"  Margin="10" Source="Images/plus.png" WidthRequest="50" HeightRequest="50"/>
+    <VerticalStackLayout Padding="20" HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="taskEntry" Placeholder="Yapılacak : " WidthRequest="400" Margin="10,10,30,0"  />
+            <ImageButton Clicked="OnAddTaskClicked"   Margin="10" Source="plus.png" WidthRequest="50" HeightRequest="50"/>
         </StackLayout>
-        <ListView x:Name="taskListView" ItemsSource="{Binding Tasks}" VerticalOptions="FillAndExpand">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" Margin="7" >
-                            <Label Text="{Binding Title}" VerticalOptions="CenterAndExpand"  TextColor="Black" Margin="10,0,10,0" />
+        <StackLayout HorizontalOptions="Center" Orientation="Vertical" Margin="20">
+
+            <ListView x:Name="taskListView" ItemsSource="{Binding Tasks}" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout Orientation="Horizontal" Margin="7" HorizontalOptions="Center">
+                                <Label 
+                                    Text="{Binding Title}" 
+                                    VerticalOptions="CenterAndExpand" 
+                                    WidthRequest="400"  
+                                    Margin="10,0,10,0" />
 
 
-                            <ImageButton                             
-                            Source="Images/edit.png"
-                            Clicked="OnEditClick"
-                            CommandParameter="{Binding .}"
-                           
-                            
-                           ></ImageButton>
+                                <ImageButton                    
+                                    Source="edit.png"
+                                    Clicked="OnEditClick"
+                                    WidthRequest="10"
+                                    HeightRequest="10"
+                                    CommandParameter="{Binding .}"/>
 
 
-                            <ImageButton
-                            Source="Images/delete.png"
-                            Clicked="OnDeleteClicked"
-                            CommandParameter="{Binding .}"></ImageButton>
+                                <ImageButton
+                                    Source="delete.png"
+                                    WidthRequest="10"
+                                    HeightRequest="10"
+                                    Clicked="OnDeleteClicked"
+                                    CommandParameter="{Binding .}"/>
 
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
     </VerticalStackLayout>
 </ContentPage>

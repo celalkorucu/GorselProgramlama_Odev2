@@ -17,7 +17,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="5">
-                        <Label Text="{Binding Name}" FontSize="20" Margin="15"/>
+                        <Label Text="{Binding Name}" FontSize="20" Margin="15" HorizontalOptions="Center"/>
                         <Image Source="{Binding Source}" WidthRequest="350" HeightRequest="100" Margin="0,40,0,0" />
                     </Grid>
                 </DataTemplate>

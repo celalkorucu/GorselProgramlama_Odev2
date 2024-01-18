@@ -13,11 +13,12 @@
             Text="ÖDEV-2!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-            <Image 
-            Source="Resources/Images/pp.jpeg"
-            WidthRequest="200"
-            HeightRequest="200"
-            Aspect="AspectFill"/>
+            
+            
+            
+            <Frame WidthRequest="300" HeightRequest="300" CornerRadius="150" Padding="0">
+                <Image Source="pp.jpeg" Aspect="AspectFill" />
+            </Frame>
 
 
             <Label Text="Celal Korucu" HorizontalOptions="CenterAndExpand"
@@ -33,6 +34,7 @@
                    HorizontalOptions="Center"
                    FontSize="25"
                    />
+            
 
         </VerticalStackLayout>
     </ScrollView>
