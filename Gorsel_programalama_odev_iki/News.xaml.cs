@@ -17,7 +17,10 @@ public partial class News : ContentPage
         FilteredNewsItems = new ObservableCollection<NewsItem>();
 
         Category defaultCategory = new Category();
-        
+        Color selectButtonColor = Color.FromHex("#808080");
+        MansetButton.BackgroundColor = selectButtonColor;
+
+        //Default olarak manþet kategorisi için
         defaultCategory.Tittle = "Manþet";
         defaultCategory.Link = "https://www.trthaber.com/manset_articles.rss";
 
@@ -29,6 +32,7 @@ public partial class News : ContentPage
         newsListView.ItemsSource = FilteredNewsItems;
 	}
 
+    //Haberimizin getirildiði metod
     public async Task GetRoot(Category category)
     {
         try
@@ -36,7 +40,6 @@ public partial class News : ContentPage
             Root root = await NewsService.GetNews(category);
             if (root != null)
             {
-                Console.WriteLine("Status: " + root.status);
 
                 FilteredNewsItems.Clear();
                 foreach (var news in root.items)
@@ -54,12 +57,12 @@ public partial class News : ContentPage
             }
             else
             {
-                Console.WriteLine("Failed to fetch news.");
+                Console.WriteLine("Haber getirilirken hata meydana geldi");
             }
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error: {ex.Message}");
+            Console.WriteLine($"Hata : {ex.Message}");
         }
     }
 
@@ -70,13 +73,17 @@ public partial class News : ContentPage
             string categoryText = clickedButton.Text;
 
 
-            clickedButton.BackgroundColor = Colors.Red; 
-           
+            listColorFix();
+            
+            Color selectButtonColor = Color.FromHex("#808080");
+            clickedButton.BackgroundColor = selectButtonColor; 
+            
            
            
 
             Category selectCategory = new Category();
 
+            //Seçilen kategoriyi bulan kod
             for(int i = 0; i<Category.CategoryList.Count; i++)
             {
                 if (Category.CategoryList[i].Tittle == categoryText)
@@ -84,8 +91,34 @@ public partial class News : ContentPage
                     selectCategory.Tittle = Category.CategoryList[i].Tittle;
                     selectCategory.Link = Category.CategoryList[i].Link;
                 }
-            }            
+            }
+            //Þeçim yaptýktan sonra listeyi yenilemek içinn
             GetRoot(selectCategory);
         }
+    }
+
+
+    public void listColorFix()
+    {
+
+
+        Color buttonColor = Color.FromHex("#CCCCCC");
+
+        MansetButton.BackgroundColor = buttonColor;
+        EkonomiButton.BackgroundColor = buttonColor;
+        GundemButton.BackgroundColor = buttonColor;
+
+        EgitimButton.BackgroundColor = buttonColor;
+
+        SporButton.BackgroundColor = buttonColor;
+        BilimButton.BackgroundColor = buttonColor;
+        SonDakikaButton.BackgroundColor = buttonColor;
+        GuncelButton.BackgroundColor = buttonColor;
+
+
+
+
+
+
     }
 }

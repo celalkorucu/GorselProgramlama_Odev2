@@ -24,45 +24,44 @@
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
-            
-            <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Color="LightBlue" />
-            <BoxView Grid.Row="1" Grid.Column="0" Grid.RowSpan="10" Color="LightBlue"/>
 
-            <Label Text="Tür" Grid.Row="0" Grid.Column="0" Margin="10" />
-            <Label Text="Alış" Grid.Row="0" Grid.Column="1" Margin="10"/>
-            <Label Text="Satış" Grid.Row="0" Grid.Column="2" Margin="10"/>
-            <Label Text="Fark" Grid.Row="0" Grid.Column="3" Margin="10"/>
-            <Label Text="Yön" Grid.Row="0" Grid.Column="4" Margin="10"/>
 
-            <Label Text="Dolar" Grid.Row="1" Grid.Column="0" Margin="10,20,0,0"/>
-            <Label Text="Euro" Grid.Row="2" Grid.Column="0" Margin="10,10,0,0"/>
-            <Label Text="Sterlin" Grid.Row="3" Grid.Column="0" Margin="10,10,0,0"/>
-            <Label Text="Gram Altın" Grid.Row="4" Grid.Column="0" Margin="10,10,0,0"/>
-            <Label Text="Çeyrek Altın" Grid.Row="5" Grid.Column="0" Margin="10,10,0,0"/>
-            <Label Text="Gümüş" Grid.Row="6" Grid.Column="0" Margin="10,10,0,0"/>
-            <Label Text="BTC" Grid.Row="7" Grid.Column="0" Margin="10,10,0,0"/>
-            <Label Text="ETH" Grid.Row="8" Grid.Column="0" Margin="10,10,0,0"/>
-            <Label Text="BIST100" Grid.Row="9" Grid.Column="0" Margin="10,10,0,0"/>
+           
 
-            
+            <Label Text="Tür" Grid.Row="0" Grid.Column="0" Margin="10" TextColor="Gray"/>
+            <Label Text="Alış" Grid.Row="0" Grid.Column="1" Margin="10" TextColor="Gray"/>
+            <Label Text="Satış" Grid.Row="0" Grid.Column="2" Margin="10" TextColor="Gray"/>
+            <Label Text="Fark" Grid.Row="0" Grid.Column="3" Margin="10" TextColor="Gray"/>
+            <Label Text="Yön" Grid.Row="0" Grid.Column="4" Margin="10" TextColor="Gray"/>
+
+            <Label Text="Dolar" Grid.Row="1" Grid.Column="0" Margin="10,20,0,0" TextColor="Green"/>
+            <Label Text="Euro" Grid.Row="2" Grid.Column="0" Margin="10,10,0,0" TextColor="Green"/>
+            <Label Text="Sterlin" Grid.Row="3" Grid.Column="0" Margin="10,10,0,0" TextColor="Green"/>
+            <Label Text="Gram Altın" Grid.Row="4" Grid.Column="0" Margin="10,10,0,0" TextColor="Green"/>
+            <Label Text="Çeyrek Altın" Grid.Row="5" Grid.Column="0" Margin="10,10,0,0" TextColor="Green"/>
+            <Label Text="Gümüş" Grid.Row="6" Grid.Column="0" Margin="10,10,0,0" TextColor="Green"/>
+            <Label Text="BTC" Grid.Row="7" Grid.Column="0" Margin="10,10,0,0" TextColor="Green"/>
+            <Label Text="ETH" Grid.Row="8" Grid.Column="0" Margin="10,10,0,0" TextColor="Green"/>
+            <Label Text="BIST100" Grid.Row="9" Grid.Column="0" Margin="10,10,0,0" TextColor="Green"/>
+
+
             <CollectionView x:Name="buyingGrid" Grid.Row="1" Grid.Column="1"  Grid.RowSpan="9"  ItemsSource="{Binding RatesItems}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid  HeightRequest="50">
-                            
+
                             <Label Text="{Binding Buying}" Margin="10" />
-                            
+
                         </Grid>
-                   </DataTemplate>
-               </CollectionView.ItemTemplate>
-           </CollectionView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
             <CollectionView x:Name="salesGrid" Grid.Row="1" Grid.Column="2"  Grid.RowSpan="9"  ItemsSource="{Binding SalesItems}">
                 <CollectionView.ItemTemplate>
@@ -93,7 +92,7 @@
                     <DataTemplate>
                         <Grid HeightRequest="50">
 
-                            <Label Text="{Binding Yon}" Margin="10"/>
+                            <Image Source="{Binding Yon}" Margin="10"/>
 
                         </Grid>
                     </DataTemplate>
@@ -102,7 +101,15 @@
         </Grid>
 
     </StackLayout>
-    
+
+
+
+
+
 
 </ContentPage>
+    
+    <!--
+    
+        -->
     

@@ -12,8 +12,9 @@
             //HOME
             var pageMainMenuItem = new ToolbarItem
             {
-                //Text = "Ana Sayfa",
+                
                 IconImageSource = ImageSource.FromFile("Images/home.png"),
+                Text = "Ana sayfa",
                 Order = ToolbarItemOrder.Primary,
                 Priority = 0
             };
@@ -29,7 +30,7 @@
             //NEWS
             var pageNewsMenuItem = new ToolbarItem
             {
-                //Text = "News",
+                Text = "Haberler",
                 IconImageSource = ImageSource.FromFile("Images/news.png"),
                 Order = ToolbarItemOrder.Primary,
 
@@ -48,7 +49,7 @@
             //RATE
             var pageRateMenuItem = new ToolbarItem
             {
-                //Text = "Rates",
+                Text = "Kurlar",
                 IconImageSource = ImageSource.FromFile("Images/rates.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 1
@@ -65,7 +66,7 @@
             //WEATHER
             var pageWeatherItem = new ToolbarItem
             {
-                // Text = "Weather",
+                 Text = "Hava Durumu",
                 IconImageSource = ImageSource.FromFile("Images/weather.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 1
@@ -82,7 +83,7 @@
             //TODO
             var pageTodoMenuItem = new ToolbarItem
             {
-                // Text = "Todo",
+                 Text = "Yapılacaklar",
                 IconImageSource = ImageSource.FromFile("Images/todo.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 1
@@ -99,7 +100,7 @@
             //SETTING
             var pageSettingsMenuItem = new ToolbarItem
             {
-
+                Text = "Ayarlar",
                 IconImageSource = ImageSource.FromFile("Images/settings.png"),
                 Order = ToolbarItemOrder.Primary,
                 Priority = 1

@@ -97,24 +97,117 @@ public partial class Rate : ContentPage
         changeGrid.ItemsSource = ChangesItems;
 
 
-        YonItems = new ObservableCollection<RateItem>
+        Image upImage = new Image();
+        Image downImage = new Image();
+
+        upImage.Source = ImageSource.FromFile("up.png");
+        downImage.Source = ImageSource.FromFile("down.png");
+
+        YonItems  = new ObservableCollection<RateItem>();
+
+        if(root.USD.d_yon == "caret-up")
         {
-               new RateItem { Yon = root.USD.d_yon},
-            new RateItem { Yon = root.EUR.d_yon },
-            new RateItem { Yon = root.GBP.d_yon},
-            new RateItem { Yon = root.GA.d_yon},
-            new RateItem { Yon = root.C.d_yon},
-            new RateItem { Yon = root.GAG.d_yon},
-            new RateItem { Yon = root.BTC.d_yon},
-            new RateItem { Yon = root.ETH.d_yon},
-            
+            RateItem usdRateItem = new RateItem { Yon = "up.png" };
+            YonItems.Add(usdRateItem);
+        }
+        else
+        {
+            RateItem usdRateItem = new RateItem { Yon = "down.png" };
+            YonItems.Add(usdRateItem);
 
-        };
-      
+        }
 
+        //Euro
+        if (root.EUR.d_yon == "caret-up")
+        {
+            RateItem rateItem = new RateItem { Yon = "up.png" };
+            YonItems.Add(rateItem);
+        }
+        else
+        {
+            RateItem rateItem = new RateItem { Yon = "down.png" };
+            YonItems.Add(rateItem);
+
+        }
+
+        //Sterlin
+        if (root.GBP.d_yon == "caret-up")
+        {
+            RateItem rateItem = new RateItem { Yon = "up.png" };
+            YonItems.Add(rateItem);
+        }
+        else
+        {
+            RateItem rateItem = new RateItem { Yon = "down.png" };
+            YonItems.Add(rateItem);
+
+        }
+        //Gram Altýn
+        if (root.GA.d_yon == "caret-up")
+        {
+            RateItem rateItem = new RateItem { Yon = "up.png" };
+            YonItems.Add(rateItem);
+        }
+        else
+        {
+            RateItem rateItem = new RateItem { Yon = "down.png" };
+            YonItems.Add(rateItem);
+
+        }
+
+        //Çeyrek Altýn
+        if (root.C.d_yon == "caret-up")
+        {
+            RateItem rateItem = new RateItem { Yon = "up.png" };
+            YonItems.Add(rateItem);
+        }
+        else
+        {
+            RateItem rateItem = new RateItem { Yon = "down.png" };
+            YonItems.Add(rateItem);
+
+        }
+        //Gümüþ
+        if (root.GAG.d_yon == "caret-up")
+        {
+            RateItem rateItem = new RateItem { Yon = "up.png" };
+            YonItems.Add(rateItem);
+        }
+        else
+        {
+            RateItem rateItem = new RateItem { Yon = "down.png" };
+            YonItems.Add(rateItem);
+
+        }
+
+        //BTC
+        if (root.BTC.d_yon == "caret-up")
+        {
+            RateItem rateItem = new RateItem { Yon = "up.png" };
+            YonItems.Add(rateItem);
+        }
+        else
+        {
+            RateItem rateItem = new RateItem { Yon = "down.png" };
+            YonItems.Add(rateItem);
+
+        }
+        //ETH
+        if (root.ETH.d_yon == "caret-up")
+        {
+            RateItem rateItem = new RateItem { Yon = "up.png" };
+            YonItems.Add(rateItem);
+        }
+        else
+        {
+            RateItem rateItem = new RateItem { Yon = "down.png" };
+            YonItems.Add(rateItem);
+
+        }
+
+   
         yonGrid.ItemsSource = YonItems;
-
-
+        
     }
 
     public async Task<Root> GetRates()
@@ -127,7 +220,6 @@ public partial class Rate : ContentPage
             if (!string.IsNullOrEmpty(json))
             {
                 Root root = JsonConvert.DeserializeObject<Root>(json);
-                Console.WriteLine(json);
                 
                 return root;
 
